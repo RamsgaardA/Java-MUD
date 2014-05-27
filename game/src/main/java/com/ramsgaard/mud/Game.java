@@ -1,5 +1,6 @@
 package com.ramsgaard.mud;
 
+import com.ramsgaard.mud.world.Level;
 import com.ramsgaard.mud.world.Tile;
 
 public class Game {
@@ -11,6 +12,15 @@ public class Game {
     public static final Tile[] tileIndex = new Tile[]{NULL_TILE, FLOOR_TILE, WALL_TILE};
 
     public static void main(String[] args) {
+        int[][] testindexmap = {
+                {1,1,1,2,1},
+                {1,1,1,2,1},
+                {1,1,3,2,1},
+                {1,1,1,2,1},
+                {1,1,1,2,1}
+        };
+        Level myLevel = new Level("My Level", 1, testindexmap);
+
     }
 
     public static Tile[][] buildMap(int[][] indexMap) {
@@ -19,6 +29,7 @@ public class Game {
             for (int x = 0; x < indexMap[y].length; x++) {
                 for(Tile i : tileIndex){
                    if(i.index == indexMap[y][x]) map[y][x] = i;
+                    else if(indexMap[y][x] >= tileIndex.length) map[y][x] = NULL_TILE;
                 }
             }
         }

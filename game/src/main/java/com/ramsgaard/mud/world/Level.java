@@ -13,7 +13,7 @@ public class Level {
     public Level(String name, int difficulty, int[][] indexMap) {
         this.name = name;
         this.difficulty = difficulty;
-        this.groundLayer = Game.makeLayer(indexMap);
+        this.groundLayer = Game.buildMap(indexMap);
 
     }
 

@@ -4,7 +4,7 @@ package com.ramsgaard.mud.world;
 * Created by martin on 27/05/14.
 */
 public class Tile {
-    int index;
+    public int index;
     String symbol;
     String color;
     Boolean isWalkable;

@@ -1,21 +1,23 @@
 package com.ramsgaard.mud;
 
+import com.ramsgaard.mud.world.Tile;
+
 public class Game {
 
-    static final GameClasses.Tile nullTile = new GameClasses.Tile("?", "White", true, 0);
-    static final GameClasses.Tile floorTile = new GameClasses.Tile(".", "Grey", true, 1);
-    static final GameClasses.Tile wallTile = new GameClasses.Tile("#", "Black", false, 2);
+    public static final Tile NULL_TILE = new Tile("?", "White", true, 0);
+    public static final Tile FLOOR_TILE = new Tile(".", "Grey", true, 1);
+    public static final Tile WALL_TILE = new Tile("#", "Black", false, 2);
 
-    GameClasses.Tile[] tileIndex = new GameClasses.Tile[]{nullTile, floorTile, wallTile};
+    Tile[] tileIndex = new Tile[]{NULL_TILE, FLOOR_TILE, WALL_TILE};
 
     public static void main(String[] args) {
     }
 
-    public static GameClasses.Tile[][] makeLayer(int[][] indexMap) {
-        GameClasses.Tile[][] map = new GameClasses.Tile[indexMap.length][indexMap[0].length];
+    public static Tile[][] makeLayer(int[][] indexMap) {
+        Tile[][] map = new Tile[indexMap.length][indexMap[0].length];
         for (int y = 0; y < indexMap.length; y++) {
             for (int x = 0; x < indexMap[y].length; x++) {
-                if (indexMap[y][x] == 0) map[y][x] = nullTile;
+                if (indexMap[y][x] == 0) map[y][x] = NULL_TILE;
             }
         }
         return map;

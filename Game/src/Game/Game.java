@@ -1,5 +1,7 @@
 package Game;
 
+import Game.GameClasses.*;
+
 public class Game {
 
     Tile nullTile = new Tile("?", "White", true, 0);

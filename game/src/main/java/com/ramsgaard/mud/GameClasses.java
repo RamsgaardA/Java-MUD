@@ -1,6 +1,7 @@
-package Game;
+package com.ramsgaard.mud;
 
 public class GameClasses {
+
     public static class Tile {
         int index;
         String symbol;
@@ -20,7 +21,8 @@ public class GameClasses {
         String name;
         int difficulty;
         Tile[][] groundLayer;
-        public Level(String name, int difficulty, int[][] indexMap){
+
+        public Level(String name, int difficulty, int[][] indexMap) {
             this.name = name;
             this.difficulty = difficulty;
             this.groundLayer = Game.makeLayer(indexMap);

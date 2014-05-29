@@ -13,13 +13,14 @@ public class Game {
 
     public static void main(String[] args) {
         int[][] testindexmap = {
+                {3,1,1,2,1},
                 {1,1,1,2,1},
                 {1,1,1,2,1},
-                {1,1,3,2,1},
                 {1,1,1,2,1},
                 {1,1,1,2,1}
         };
         Level myLevel = new Level("My Level", 1, testindexmap);
+
 
     }
 

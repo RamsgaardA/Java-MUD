@@ -1,7 +1,17 @@
 package com.ramsgaard.mud.entities;
 
-/**
- * Created by martin on 27/05/14.
- */
+import java.util.UUID;
+
 public class Entity {
+    String id = UUID.randomUUID().toString();
+    char symbol;
+    String color;
+    boolean isWalkable;
+    int x;
+    int y;
+    String level;
+    public Entity(int x){
+        this.x = x;
+    }
+
 }
